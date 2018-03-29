@@ -32,7 +32,7 @@ RUN mkdir -p /usr/share/maven \
   && rm -f /tmp/apache-maven.tar.gz \
   && ln -s $MAVEN_HOME/bin/mvn /usr/bin/mvn
 
-COPY ./settings.xml $MAVEN_HOME/conf/settings.xml
+# COPY ./settings.xml $MAVEN_HOME/conf/settings.xml
 
 RUN groupadd --system jenkins && useradd --home-dir /jenkins --create-home --shell /bin/bash --gid jenkins jenkins
 
